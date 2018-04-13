@@ -1,2 +1,4 @@
-# DcardMailNotify
-Dcard未讀信件通知
+待辦  
+從json可以取出出生年月日  
+從yaml讀取登入帳密  
+保存訊息id 不要重覆發送訊息  
