@@ -1,0 +1,18 @@
+# Dcard登入的帳密 記得冒號後空一格
+DcardLogin:
+ Account: vi000246@gmail.com
+ Password: uish2013
+
+# 通知方式
+Notify:
+ PTTWater: #PTT水球
+    IsEnable: True # 是否啟用
+    WaterTarget: vi000246 #發送水球的目標
+    Account: vscode # 發送水球的帳號
+    Password: uish2013 #發送水球的密碼
+
+ Facebook: #臉書通知
+    IsEnable: False # 是否啟用
+    Account: vi000246 # 臉書帳號
+    Password: Yich2013 # 臉書密碼
+

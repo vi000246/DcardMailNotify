@@ -1,14 +1,22 @@
 import requests
 import json
+from config import Config
 
-
+# 主要程序進入入口
 def main():
+    config = Config()
     s = requests.session()
-    # 取csrf tokey
+    # 取csrf token
     getCsrf = s.get("https://www.dcard.tw/_api/_ping")
     # 登入
-    payload = {"email": "vi000246@gmail.com", "password": "uish2013"}
+    account,password = config.GetDcardAccount()
+    payload = {"email": account, "password": password}
     getSession = s.post('https://www.dcard.tw/_api/sessions', json=payload,headers= {'x-csrf-token': getCsrf.headers["x-csrf-token"]})
+    if getSession.text:
+        loginResult = json.loads(getSession.text)
+        if loginResult["error_description"]=="Password mismatch":
+            raise  Exception("D卡帳號密碼錯誤")
+
     # 取得信件夾各朋友最後發送的訊息
     r = s.get("https://www.dcard.tw/_api/me/messages",headers = {'x-csrf-token': getSession.headers["x-csrf-token"]})
     msgs = json.loads(r.text)
