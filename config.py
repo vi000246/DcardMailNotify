@@ -18,8 +18,7 @@ class Config:
 
     # 取得通知設置
     def GetNotifyWay(self):
-        NotifyWays = self.config["Notify"]
-        print(NotifyWays)
+        return self.config["Notify"]
 
 
 

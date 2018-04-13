@@ -1,6 +1,7 @@
 import requests
 import json
 from config import Config
+from MsgHandler import Notify
 
 # 主要程序進入入口
 def main():
@@ -27,7 +28,13 @@ def main():
         Name = msg["speaker"]["name"] # 發訊息的人
         content = msg["content"] # 內容
         msgId = msg["id"] # 訊息編號
-        print(Name,content,msgId)
+        # print(Name,content,msgId)
+        # 取得通知的設定
+        NotifyWays = config.GetNotifyWay()
+        for notifyType,settings in NotifyWays.items():
+            # 如果此通知為啟用
+            if settings["IsEnable"]:
+                Notify(Name,content,msgId,notifyType,settings)
 
 
 

@@ -16,3 +16,6 @@ Notify:
     Account: vi000246 # 臉書帳號
     Password: Yich2013 # 臉書密碼
 
+ Line: # Line Notify 參考這篇設置http://studyhost.blogspot.tw/2016/12/linebot6-botline-notify.html
+    IsEnable: True
+    Token: zxSeJ7zfqOcttg04N7np5GUDiebbqZvXJ6WDyhO2F6n
