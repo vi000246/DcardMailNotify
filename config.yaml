@@ -1,7 +1,7 @@
 # Dcard登入的帳密 記得冒號後空一格
 DcardLogin:
  Account: vi000246@gmail.com
- Password: uish2013
+ Password: 
 
 # 通知方式
 Notify:
@@ -9,12 +9,12 @@ Notify:
     IsEnable: True # 是否啟用
     WaterTarget: vi000246 #發送水球的目標
     Account: vscode # 發送水球的帳號
-    Password: uish2013 #發送水球的密碼
+    Password:  #發送水球的密碼
 
  Facebook: #臉書通知
     IsEnable: False # 是否啟用
     Account: vi000246 # 臉書帳號
-    Password: Yich2013 # 臉書密碼
+    Password:  # 臉書密碼
 
  Line: # Line Notify 參考這篇設置http://studyhost.blogspot.tw/2016/12/linebot6-botline-notify.html
     IsEnable: True
